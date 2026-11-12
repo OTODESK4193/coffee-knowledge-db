@@ -23,6 +23,7 @@
 | `database_schema_v2.sql` / `app_schema_extension.sql` | DBスキーマ |
 | `update_questions.py` | 問題データの検証・統合スクリプト |
 | `questions_export.json` / `glossary_export.json` | アプリ取り込み用エクスポート |
+| `app/` | 静的PWA版アプリ本体（素のHTML/CSS/JS、記録は端末内保存）。`app/sync-data.py` で正本からデータを再同期 |
 | `sources_catalog_*.md` ほか | 情報源カタログ、調査項目整理、アプリ計画などの設計文書 |
 
 ## このリポジトリに含まれないもの

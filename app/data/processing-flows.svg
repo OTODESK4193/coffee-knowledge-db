@@ -1,0 +1,164 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1420 780" font-family="'Hiragino Sans','Hiragino Kaku Gothic ProN','Noto Sans JP',sans-serif">
+  <rect width="1420" height="780" fill="#FFFDF8"/>
+  <text x="40" y="50" font-size="28" font-weight="bold" fill="#2E1B12">精製フローの比較 ― ウォッシュド／ナチュラル／ハニー</text>
+  <text x="40" y="82" font-size="16" fill="#5D4037">根拠: エントリー 03-04（収穫）／03-05（伝統方式）／03-07（乾燥・脱穀）。層の色はチェリー断面図（02-05）と共通です。</text>
+
+  <!-- 層カラーの凡例 -->
+  <g font-size="15" fill="#2E1B12">
+    <rect x="40" y="100" width="20" height="20" fill="#B03A2E" stroke="#7B241C"/>
+    <text x="68" y="116">外皮</text>
+    <rect x="140" y="100" width="20" height="20" fill="#E67E22" stroke="#A04000"/>
+    <text x="168" y="116">果肉</text>
+    <rect x="240" y="100" width="20" height="20" fill="#F5C542" stroke="#9A7B0A"/>
+    <text x="268" y="116">ミューシレージ</text>
+    <rect x="420" y="100" width="20" height="20" fill="#C9A86A" stroke="#8D6E3F"/>
+    <text x="448" y="116">パーチメント</text>
+    <text x="620" y="116" fill="#5D4037">各工程の下の色チップは、その工程で取り除かれる（または残される）層を示します</text>
+  </g>
+
+  <!-- ===== ウォッシュド ===== -->
+  <g>
+    <rect x="20" y="150" width="125" height="150" rx="10" fill="#1A5276"/>
+    <text x="82" y="215" font-size="19" font-weight="bold" fill="#FFFFFF" text-anchor="middle">ウォッシュド</text>
+    <text x="82" y="243" font-size="15" fill="#D6EAF8" text-anchor="middle">水洗式</text>
+    <!-- box1 -->
+    <g>
+      <rect x="165" y="165" width="185" height="120" rx="10" fill="#FFFFFF" stroke="#1A5276" stroke-width="2.5"/>
+      <text x="257" y="200" font-size="17" font-weight="bold" fill="#2E1B12" text-anchor="middle">1. 収穫・選別</text>
+      <text x="257" y="228" font-size="14" fill="#5D4037" text-anchor="middle">水に浮く欠点果の</text>
+      <text x="257" y="250" font-size="14" fill="#5D4037" text-anchor="middle">除去を含む</text>
+    </g>
+    <text x="358" y="232" font-size="24" fill="#5D4037">→</text>
+    <!-- box2 -->
+    <g>
+      <rect x="385" y="165" width="185" height="120" rx="10" fill="#FFFFFF" stroke="#1A5276" stroke-width="2.5"/>
+      <text x="477" y="200" font-size="17" font-weight="bold" fill="#2E1B12" text-anchor="middle">2. 果肉除去</text>
+      <text x="477" y="228" font-size="14" fill="#5D4037" text-anchor="middle">収穫後速やかに機械で</text>
+      <text x="477" y="250" font-size="14" fill="#5D4037" text-anchor="middle">外皮と果肉を外す</text>
+      <rect x="440" y="260" width="16" height="16" fill="#B03A2E"/><rect x="462" y="260" width="16" height="16" fill="#E67E22"/>
+      <text x="486" y="274" font-size="13" fill="#5D4037">除去</text>
+    </g>
+    <text x="578" y="232" font-size="24" fill="#5D4037">→</text>
+    <!-- box3 -->
+    <g>
+      <rect x="605" y="165" width="185" height="120" rx="10" fill="#FFFFFF" stroke="#1A5276" stroke-width="2.5"/>
+      <text x="697" y="200" font-size="17" font-weight="bold" fill="#2E1B12" text-anchor="middle">3. 発酵</text>
+      <text x="697" y="228" font-size="14" fill="#5D4037" text-anchor="middle">タンク内で微生物・酵素</text>
+      <text x="697" y="250" font-size="14" fill="#5D4037" text-anchor="middle">の働きで粘質層を分解</text>
+      <rect x="660" y="260" width="16" height="16" fill="#F5C542" stroke="#9A7B0A"/>
+      <text x="684" y="274" font-size="13" fill="#5D4037">分解</text>
+    </g>
+    <text x="798" y="232" font-size="24" fill="#5D4037">→</text>
+    <!-- box4 -->
+    <g>
+      <rect x="825" y="165" width="185" height="120" rx="10" fill="#FFFFFF" stroke="#1A5276" stroke-width="2.5"/>
+      <text x="917" y="200" font-size="17" font-weight="bold" fill="#2E1B12" text-anchor="middle">4. 水洗</text>
+      <text x="917" y="228" font-size="14" fill="#5D4037" text-anchor="middle">分解された</text>
+      <text x="917" y="250" font-size="14" fill="#5D4037" text-anchor="middle">ミューシレージを洗い流す</text>
+    </g>
+    <text x="1018" y="232" font-size="24" fill="#5D4037">→</text>
+    <!-- box5 -->
+    <g>
+      <rect x="1045" y="165" width="185" height="120" rx="10" fill="#FFFFFF" stroke="#1A5276" stroke-width="2.5"/>
+      <text x="1137" y="200" font-size="17" font-weight="bold" fill="#2E1B12" text-anchor="middle">5. 乾燥</text>
+      <text x="1137" y="228" font-size="14" fill="#5D4037" text-anchor="middle">パーチメントのまま</text>
+      <text x="1137" y="250" font-size="14" fill="#5D4037" text-anchor="middle">水分 約11%まで</text>
+      <rect x="1100" y="260" width="16" height="16" fill="#C9A86A" stroke="#8D6E3F"/>
+      <text x="1124" y="274" font-size="13" fill="#5D4037">この状態で保管も</text>
+    </g>
+    <text x="1238" y="232" font-size="24" fill="#5D4037">→</text>
+    <!-- box6 -->
+    <g>
+      <rect x="1265" y="165" width="140" height="120" rx="10" fill="#2E4A1F"/>
+      <text x="1335" y="208" font-size="17" font-weight="bold" fill="#FFFFFF" text-anchor="middle">6. 脱穀</text>
+      <text x="1335" y="234" font-size="14" fill="#D5E8C8" text-anchor="middle">パーチメント除去</text>
+      <text x="1335" y="258" font-size="15" font-weight="bold" fill="#FFFFFF" text-anchor="middle">→ 生豆</text>
+    </g>
+  </g>
+
+  <!-- ===== ナチュラル ===== -->
+  <g>
+    <rect x="20" y="330" width="125" height="150" rx="10" fill="#922B21"/>
+    <text x="82" y="395" font-size="19" font-weight="bold" fill="#FFFFFF" text-anchor="middle">ナチュラル</text>
+    <text x="82" y="423" font-size="15" fill="#FADBD8" text-anchor="middle">乾式</text>
+    <g>
+      <rect x="165" y="345" width="185" height="120" rx="10" fill="#FFFFFF" stroke="#922B21" stroke-width="2.5"/>
+      <text x="257" y="380" font-size="17" font-weight="bold" fill="#2E1B12" text-anchor="middle">1. 収穫・選別</text>
+      <text x="257" y="408" font-size="14" fill="#5D4037" text-anchor="middle">成熟選別が特に重要</text>
+      <text x="257" y="430" font-size="14" fill="#5D4037" text-anchor="middle">（後段で修正が効かない）</text>
+    </g>
+    <text x="358" y="412" font-size="24" fill="#5D4037">→</text>
+    <g>
+      <rect x="385" y="345" width="300" height="120" rx="10" fill="#FFFFFF" stroke="#922B21" stroke-width="2.5"/>
+      <text x="535" y="380" font-size="17" font-weight="bold" fill="#2E1B12" text-anchor="middle">2. チェリーのまま乾燥</text>
+      <text x="535" y="408" font-size="14" fill="#5D4037" text-anchor="middle">外皮・果肉をつけたまま天日で乾燥</text>
+      <text x="535" y="430" font-size="14" fill="#5D4037" text-anchor="middle">（攪拌・雨対策・カビ防止が品質を決める）</text>
+      <rect x="450" y="438" width="16" height="16" fill="#B03A2E"/><rect x="472" y="438" width="16" height="16" fill="#E67E22"/><rect x="494" y="438" width="16" height="16" fill="#F5C542" stroke="#9A7B0A"/>
+      <text x="518" y="452" font-size="13" fill="#5D4037">層は付けたまま</text>
+    </g>
+    <text x="693" y="412" font-size="24" fill="#5D4037">→</text>
+    <g>
+      <rect x="720" y="345" width="300" height="120" rx="10" fill="#FFFFFF" stroke="#922B21" stroke-width="2.5"/>
+      <text x="870" y="380" font-size="17" font-weight="bold" fill="#2E1B12" text-anchor="middle">3. 脱穀</text>
+      <text x="870" y="408" font-size="14" fill="#5D4037" text-anchor="middle">乾いた果皮・果肉とパーチメントを</text>
+      <text x="870" y="430" font-size="14" fill="#5D4037" text-anchor="middle">一度に取り除く</text>
+    </g>
+    <text x="1028" y="412" font-size="24" fill="#5D4037">→</text>
+    <g>
+      <rect x="1055" y="345" width="140" height="120" rx="10" fill="#2E4A1F"/>
+      <text x="1125" y="398" font-size="18" font-weight="bold" fill="#FFFFFF" text-anchor="middle">生豆</text>
+      <text x="1125" y="424" font-size="14" fill="#D5E8C8" text-anchor="middle">選別・等級付けへ</text>
+    </g>
+    <text x="1215" y="398" font-size="15" fill="#5D4037">発酵・水洗の工程はない。</text>
+    <text x="1215" y="424" font-size="15" fill="#5D4037">最も古く単純な方式（FAO）</text>
+  </g>
+
+  <!-- ===== ハニー ===== -->
+  <g>
+    <rect x="20" y="510" width="125" height="150" rx="10" fill="#9A7B0A"/>
+    <text x="82" y="568" font-size="18" font-weight="bold" fill="#FFFFFF" text-anchor="middle">ハニー／</text>
+    <text x="82" y="594" font-size="18" font-weight="bold" fill="#FFFFFF" text-anchor="middle">パルプド</text>
+    <text x="82" y="620" font-size="18" font-weight="bold" fill="#FFFFFF" text-anchor="middle">ナチュラル</text>
+    <g>
+      <rect x="165" y="525" width="185" height="120" rx="10" fill="#FFFFFF" stroke="#9A7B0A" stroke-width="2.5"/>
+      <text x="257" y="560" font-size="17" font-weight="bold" fill="#2E1B12" text-anchor="middle">1. 収穫・選別</text>
+      <text x="257" y="588" font-size="14" fill="#5D4037" text-anchor="middle">完熟果を選ぶ</text>
+    </g>
+    <text x="358" y="592" font-size="24" fill="#5D4037">→</text>
+    <g>
+      <rect x="385" y="525" width="185" height="120" rx="10" fill="#FFFFFF" stroke="#9A7B0A" stroke-width="2.5"/>
+      <text x="477" y="560" font-size="17" font-weight="bold" fill="#2E1B12" text-anchor="middle">2. 果肉除去</text>
+      <text x="477" y="588" font-size="14" fill="#5D4037" text-anchor="middle">ウォッシュドと同様に</text>
+      <text x="477" y="610" font-size="14" fill="#5D4037" text-anchor="middle">外皮と果肉を外す</text>
+      <rect x="440" y="618" width="16" height="16" fill="#B03A2E"/><rect x="462" y="618" width="16" height="16" fill="#E67E22"/>
+      <text x="486" y="632" font-size="13" fill="#5D4037">除去</text>
+    </g>
+    <text x="578" y="592" font-size="24" fill="#5D4037">→</text>
+    <g>
+      <rect x="605" y="525" width="300" height="120" rx="10" fill="#FFFFFF" stroke="#9A7B0A" stroke-width="2.5"/>
+      <text x="755" y="560" font-size="17" font-weight="bold" fill="#2E1B12" text-anchor="middle">3. ミューシレージを残して乾燥</text>
+      <text x="755" y="588" font-size="14" fill="#5D4037" text-anchor="middle">発酵・水洗を経ず（または最小限にし）</text>
+      <text x="755" y="610" font-size="14" fill="#5D4037" text-anchor="middle">粘質層をつけたままパーチメントごと乾燥</text>
+      <rect x="690" y="618" width="16" height="16" fill="#F5C542" stroke="#9A7B0A"/>
+      <text x="714" y="632" font-size="13" fill="#5D4037">残す量が方式の個性になる</text>
+    </g>
+    <text x="913" y="592" font-size="24" fill="#5D4037">→</text>
+    <g>
+      <rect x="940" y="525" width="185" height="120" rx="10" fill="#FFFFFF" stroke="#9A7B0A" stroke-width="2.5"/>
+      <text x="1032" y="560" font-size="17" font-weight="bold" fill="#2E1B12" text-anchor="middle">4. 脱穀</text>
+      <text x="1032" y="588" font-size="14" fill="#5D4037" text-anchor="middle">パーチメントを取り除く</text>
+    </g>
+    <text x="1133" y="592" font-size="24" fill="#5D4037">→</text>
+    <g>
+      <rect x="1160" y="525" width="140" height="120" rx="10" fill="#2E4A1F"/>
+      <text x="1230" y="578" font-size="18" font-weight="bold" fill="#FFFFFF" text-anchor="middle">生豆</text>
+      <text x="1230" y="604" font-size="14" fill="#D5E8C8" text-anchor="middle">選別・等級付けへ</text>
+    </g>
+  </g>
+
+  <!-- 注記 -->
+  <g font-size="15" fill="#5D4037">
+    <text x="40" y="706">注: ハニーで残すミューシレージの量による色名（ホワイト／イエロー／レッド／ブラック等）は、生産者・地域に依存する呼称で、公的規格ではありません（03-05）。</text>
+    <text x="40" y="734">乾燥の終点は最適とされる水分 約11%（FAO資料）。脱穀後の比重・スクリーン・手／光学選別と等級付けは 03-07 を参照。スマトラ式（ウェットハル）は順序が異なるため本図の対象外です。</text>
+  </g>
+</svg>

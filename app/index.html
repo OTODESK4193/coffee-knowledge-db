@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>コーヒー知識学習アプリ（静的版）</title>
+<meta name="description" content="コーヒー知識を学ぶ4択クイズアプリ（静的PWA版）。記録は端末内に保存されます。">
+<meta name="theme-color" content="#3b2314">
+<link rel="manifest" href="manifest.json">
+<link rel="icon" type="image/svg+xml" href="icon.svg">
+<link rel="apple-touch-icon" href="icon-192.png">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="app-header">
+  <button id="home-btn" class="header-btn" hidden aria-label="ホームへ">← ホーム</button>
+  <span class="header-title">コーヒー知識学習</span>
+  <button id="gear-btn" class="header-btn gear" aria-label="設定">⚙</button>
+</header>
+
+<main id="app">
+  <div class="loading">読み込み中…</div>
+</main>
+
+<!-- 設定オーバーレイ -->
+<div id="settings" class="overlay" hidden>
+  <div class="overlay-panel">
+    <div class="overlay-head">
+      <span>設定</span>
+      <button id="settings-close" class="icon-btn" aria-label="閉じる">×</button>
+    </div>
+    <div class="setting-group">
+      <div class="setting-label">テーマ別・用語クイズの出題数</div>
+      <label class="radio-row"><input type="radio" name="session-size" value="5"> 5問</label>
+      <label class="radio-row"><input type="radio" name="session-size" value="10"> 10問</label>
+      <label class="radio-row"><input type="radio" name="session-size" value="20"> 20問</label>
+      <div class="setting-note">入門コース（全65問）と復習（全件）には適用されません。</div>
+    </div>
+    <div class="setting-group">
+      <div class="setting-label">文字サイズ</div>
+      <label class="radio-row"><input type="radio" name="font-size" value="normal"> 標準</label>
+      <label class="radio-row"><input type="radio" name="font-size" value="large"> 大きめ</label>
+      <label class="radio-row"><input type="radio" name="font-size" value="xlarge"> 特大</label>
+    </div>
+    <div class="setting-group">
+      <div class="setting-label">データ</div>
+      <button id="reset-data" class="btn btn-danger">学習記録と設定を初期化</button>
+      <div class="setting-note">この端末に保存された学習記録（回答履歴・復習リスト・設定）だけを消します。問題データは消えません。</div>
+    </div>
+  </div>
+</div>
+
+<!-- 用語シート（画面下） -->
+<div id="term-sheet" class="sheet-backdrop" hidden>
+  <div class="sheet-panel">
+    <button id="term-sheet-close" class="icon-btn sheet-close" aria-label="閉じる">×</button>
+    <div id="term-sheet-body"></div>
+  </div>
+</div>
+
+<!-- 確認ダイアログ -->
+<div id="dialog" class="overlay" hidden>
+  <div class="overlay-panel dialog-panel">
+    <p id="dialog-msg" class="dialog-msg"></p>
+    <div id="dialog-btns" class="dialog-btns"></div>
+  </div>
+</div>
+
+<script src="js/store.js"></script>
+<script src="js/engine.js"></script>
+<script src="js/terms.js"></script>
+<script src="js/map.js"></script>
+<script src="js/media.js"></script>
+<script src="js/app.js"></script>
+</body>
+</html>
