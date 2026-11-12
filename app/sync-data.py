@@ -17,6 +17,7 @@
   data/producer_highlights.json
   data/world_countries.geojson
   data/*.svg                 図解SVG 4点
+  data/svg_texts.json        図解SVGのテキスト埋め込み（ビューア表示を読み込み経路に依存させないため）
   data/photos.json           写真の遠隔URLと帰属表示（バイナリは同梱しない。
                              photos_licences.md の Commons ファイルページから
                              Special:FilePath URL を組み立てる）
@@ -135,6 +136,21 @@ def build_photos():
     dump_json(photos, DATA / "photos.json")
 
 
+def build_svg_texts():
+    """図解SVGのテキストを JSON に埋め込む。アプリ側はこれを同期的に
+    インライン描画するので、ビューア表示が個別ファイルの取得成否に左右されない。"""
+    texts = {}
+    for name in (
+        "cherry-cross-section.svg",
+        "processing-flows.svg",
+        "roast-curve.svg",
+        "variety-lineage.svg",
+    ):
+        texts[name] = (ROOT / "media_assets" / name).read_text(encoding="utf-8")
+    print(f"svg_texts: {len(texts)} 件")
+    dump_json(texts, DATA / "svg_texts.json")
+
+
 def main():
     DATA.mkdir(parents=True, exist_ok=True)
     print("== 静的アプリ用データ同期 ==")
@@ -159,6 +175,7 @@ def main():
         dst = DATA / name
         shutil.copyfile(src, dst)
         print(f"  -> data/{name} ({dst.stat().st_size:,} bytes)")
+    build_svg_texts()
     build_photos()
     print("完了")
 

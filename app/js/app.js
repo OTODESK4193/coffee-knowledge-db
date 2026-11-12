@@ -49,6 +49,7 @@
       tables: 'data/tables.json',
       producerHighlights: 'data/producer_highlights.json',
       photos: 'data/photos.json',
+      svgTexts: 'data/svg_texts.json',
       geojson: 'data/world_countries.geojson'
     };
     var loads = Object.keys(files).map(function (k) {

@@ -23,6 +23,9 @@
 
   function init(data) {
     state.mediaLinks = data.mediaLinks;
+    if (data.svgTexts) {
+      Object.keys(data.svgTexts).forEach(function (k) { svgTexts[k] = data.svgTexts[k]; });
+    }
     state.tables = {};
     (data.tables.tables || []).forEach(function (t) { state.tables[t.media_id] = t; });
     state.photos = data.photos || [];

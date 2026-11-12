@@ -1,7 +1,7 @@
 /* Service Worker — アプリ本体と同梱データをキャッシュし、オフラインでも動かす。
  * 写真（Wikimedia Commons の遠隔画像）はキャッシュせず、オンライン時のみ表示する。
  * データを更新したら CACHE_VERSION を上げること。 */
-var CACHE_VERSION = 'cka-static-v4';
+var CACHE_VERSION = 'cka-static-v5';
 var CORE = [
   './',
   './index.html',
@@ -22,6 +22,7 @@ var CORE = [
   './data/tables.json',
   './data/producer_highlights.json',
   './data/photos.json',
+  './data/svg_texts.json',
   './data/world_countries.geojson',
   './data/cherry-cross-section.svg',
   './data/processing-flows.svg',
