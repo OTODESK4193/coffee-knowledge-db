@@ -34,6 +34,29 @@
     });
   }
 
+  /* ---------- 図解SVG（<img>ではなくインライン埋め込みで表示する） ---------- */
+  var svgTexts = {};
+  var svgWaiters = {};
+  function loadSvg(file, cb) {
+    if (svgTexts[file]) { cb(svgTexts[file]); return; }
+    if (svgWaiters[file]) { svgWaiters[file].push(cb); return; }
+    svgWaiters[file] = [cb];
+    fetch('data/' + file).then(function (r) {
+      if (!r.ok) throw new Error(file + ' ' + r.status);
+      return r.text();
+    }).then(function (t) {
+      svgTexts[file] = t;
+      (svgWaiters[file] || []).forEach(function (f) { f(t); });
+      delete svgWaiters[file];
+    }).catch(function () { delete svgWaiters[file]; });
+  }
+  function svgDiv(file) {
+    var div = document.createElement('div');
+    div.className = 'svg-box';
+    loadSvg(file, function (t) { div.innerHTML = t; });
+    return div;
+  }
+
   /* ---------- 表の描画 ---------- */
   var CELL_LABELS = { item: '項目', target: '目標値', acceptable_range: '許容範囲', recommended: '推奨' };
   var TABLE_KEY_ORDER = {
@@ -166,11 +189,7 @@
       var holder = document.createElement('div');
       holder.className = 'media-holder';
       if (it.kind === 'svg') {
-        var img = document.createElement('img');
-        img.src = 'data/' + it.file;
-        img.alt = it.alt || it.title || '';
-        img.loading = 'lazy';
-        holder.appendChild(img);
+        holder.appendChild(svgDiv(it.file));
       } else if (it.kind === 'table') {
         holder.appendChild(tableEl(it.table));
       } else if (it.kind === 'map') {
@@ -206,10 +225,7 @@
     var wrap = document.createElement('div');
     wrap.className = 'viewer-content';
     if (it.kind === 'svg') {
-      var img = document.createElement('img');
-      img.src = 'data/' + it.file;
-      img.alt = it.alt || '';
-      wrap.appendChild(img);
+      wrap.appendChild(svgDiv(it.file));
     } else if (it.kind === 'table') {
       wrap.appendChild(tableEl(it.table));
     } else if (it.kind === 'map') {
@@ -264,7 +280,9 @@
       this.inner = el.querySelector('.viewer-inner');
       var self = this;
       el.querySelector('.viewer-close').addEventListener('click', function () { self.close(); });
-      el.addEventListener('click', function (ev) { if (ev.target === el) self.close(); });
+      el.addEventListener('click', function (ev) {
+        if (ev.target === el || ev.target === self.stage || ev.target === self.inner) self.close();
+      });
       document.addEventListener('keydown', function (ev) {
         if (ev.key === 'Escape' && !el.hidden) self.close();
       });

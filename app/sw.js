@@ -1,7 +1,7 @@
 /* Service Worker — アプリ本体と同梱データをキャッシュし、オフラインでも動かす。
  * 写真（Wikimedia Commons の遠隔画像）はキャッシュせず、オンライン時のみ表示する。
  * データを更新したら CACHE_VERSION を上げること。 */
-var CACHE_VERSION = 'cka-static-v3';
+var CACHE_VERSION = 'cka-static-v4';
 var CORE = [
   './',
   './index.html',
@@ -55,16 +55,16 @@ self.addEventListener('fetch', function (event) {
   var url = new URL(event.request.url);
   /* 写真などの外部リソースは素通し（オンライン時のみ） */
   if (url.origin !== self.location.origin) return;
+  /* ネットワーク優先（更新を即反映し、オフライン時のみキャッシュを使う） */
   event.respondWith(
-    caches.match(event.request, { ignoreSearch: true }).then(function (hit) {
-      if (hit) return hit;
-      return fetch(event.request).then(function (res) {
-        if (event.request.method === 'GET' && res.ok) {
-          var copy = res.clone();
-          caches.open(CACHE_VERSION).then(function (cache) { cache.put(event.request, copy); });
-        }
-        return res;
-      });
+    fetch(event.request).then(function (res) {
+      if (event.request.method === 'GET' && res.ok) {
+        var copy = res.clone();
+        caches.open(CACHE_VERSION).then(function (cache) { cache.put(event.request, copy); });
+      }
+      return res;
+    }).catch(function () {
+      return caches.match(event.request, { ignoreSearch: true });
     })
   );
 });

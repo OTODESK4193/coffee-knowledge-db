@@ -505,6 +505,7 @@
     var choicesBox = el('div', 'choices');
     card.choices.forEach(function (text, idx) {
       var b = el('button', 'choice');
+      b.appendChild(el('span', 'choice-letter', 'ABCD'[idx] || ''));
       var tspan = document.createElement('span');
       Terms.renderInto(tspan, text, ctx, { annotate: true, linkable: false });
       b.appendChild(tspan);
