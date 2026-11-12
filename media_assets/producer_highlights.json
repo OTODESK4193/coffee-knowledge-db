@@ -1,0 +1,67 @@
+{
+  "description": "カテゴリ04の国別プロファイル・エントリーに対応する主要生産国ハイライト。world_countries.geojson の iso_a3 と突き合わせて色付け表示するための一覧。",
+  "base_map": "world_countries.geojson",
+  "master_entry_id": "04-01",
+  "countries": [
+    {
+      "iso_a3": "BRA",
+      "name_ja": "ブラジル",
+      "name_en": "Brazil",
+      "entry_id": "04-02-BR"
+    },
+    {
+      "iso_a3": "VNM",
+      "name_ja": "ベトナム",
+      "name_en": "Vietnam",
+      "entry_id": "04-02-VN"
+    },
+    {
+      "iso_a3": "COL",
+      "name_ja": "コロンビア",
+      "name_en": "Colombia",
+      "entry_id": "04-02-CO"
+    },
+    {
+      "iso_a3": "ETH",
+      "name_ja": "エチオピア",
+      "name_en": "Ethiopia",
+      "entry_id": "04-02-ET"
+    },
+    {
+      "iso_a3": "IDN",
+      "name_ja": "インドネシア",
+      "name_en": "Indonesia",
+      "entry_id": "04-02-ID"
+    },
+    {
+      "iso_a3": "UGA",
+      "name_ja": "ウガンダ",
+      "name_en": "Uganda",
+      "entry_id": "04-02-UG"
+    },
+    {
+      "iso_a3": "IND",
+      "name_ja": "インド",
+      "name_en": "India",
+      "entry_id": "04-02-IN"
+    },
+    {
+      "iso_a3": "HND",
+      "name_ja": "ホンジュラス",
+      "name_en": "Honduras",
+      "entry_id": "04-02-HN"
+    },
+    {
+      "iso_a3": "PER",
+      "name_ja": "ペルー",
+      "name_en": "Peru",
+      "entry_id": "04-02-PE"
+    },
+    {
+      "iso_a3": "MEX",
+      "name_ja": "メキシコ",
+      "name_en": "Mexico",
+      "entry_id": "04-02-MX"
+    }
+  ]
+}

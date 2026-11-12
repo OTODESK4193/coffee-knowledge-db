@@ -1,0 +1,120 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1240 920" font-family="'Hiragino Sans','Hiragino Kaku Gothic ProN','Noto Sans JP',sans-serif">
+  <rect width="1240" height="920" fill="#FFFDF8"/>
+  <text x="40" y="50" font-size="28" font-weight="bold" fill="#2E1B12">コーヒーチェリーの断面と層構造</text>
+  <text x="40" y="82" font-size="16" fill="#5D4037">模式図です（層の厚さの比率は実物とは異なります）。根拠: エントリー 02-05／対応メディア M-02-05-1（PN-05）</text>
+
+  <!-- ===== 縦断面（2粒が平らな面で向かい合う） ===== -->
+  <g>
+    <!-- 外皮 -->
+    <ellipse cx="320" cy="390" rx="175" ry="205" fill="#B03A2E" stroke="#7B241C" stroke-width="3"/>
+    <!-- 果肉 -->
+    <ellipse cx="320" cy="390" rx="150" ry="180" fill="#E67E22"/>
+    <!-- ミューシレージ（種子の周囲の粘質層） -->
+    <ellipse cx="320" cy="390" rx="112" ry="152" fill="#F5C542"/>
+    <!-- 左の種子: パーチメント -->
+    <path d="M320 268 L320 512 A62 122 0 0 1 320 268 Z" fill="#C9A86A" stroke="#8D6E3F" stroke-width="2.5"/>
+    <!-- 左の種子: シルバースキン -->
+    <path d="M320 284 L320 496 A50 106 0 0 1 320 284 Z" fill="#D5D8DC"/>
+    <!-- 左の種子: 胚乳 -->
+    <path d="M320 298 L320 482 A40 92 0 0 1 320 298 Z" fill="#6B8E4E"/>
+    <!-- 左の種子: 胚 -->
+    <ellipse cx="313" cy="452" rx="7" ry="13" fill="#2E4A1F"/>
+    <!-- 右の種子: パーチメント -->
+    <path d="M320 268 L320 512 A62 122 0 0 0 320 268 Z" fill="#C9A86A" stroke="#8D6E3F" stroke-width="2.5"/>
+    <!-- 右の種子: シルバースキン -->
+    <path d="M320 284 L320 496 A50 106 0 0 0 320 284 Z" fill="#D5D8DC"/>
+    <!-- 右の種子: 胚乳 -->
+    <path d="M320 298 L320 482 A40 92 0 0 0 320 298 Z" fill="#6B8E4E"/>
+    <!-- 右の種子: 胚 -->
+    <ellipse cx="327" cy="452" rx="7" ry="13" fill="#2E4A1F"/>
+    <!-- センターカット -->
+    <line x1="320" y1="292" x2="320" y2="488" stroke="#3E5F2A" stroke-width="4"/>
+    <text x="320" y="640" font-size="16" fill="#5D4037" text-anchor="middle">縦断面: 2粒の種子が平らな面（センターカットのある面）で向かい合う</text>
+  </g>
+
+  <!-- ===== 引き出し線とラベル ===== -->
+  <g font-size="17" fill="#2E1B12">
+    <!-- 外皮 -->
+    <polyline points="452,232 560,150 668,150" fill="none" stroke="#7B241C" stroke-width="2"/>
+    <circle cx="452" cy="232" r="5" fill="#7B241C"/>
+    <rect x="676" y="128" width="22" height="22" fill="#B03A2E" stroke="#7B241C"/>
+    <text x="708" y="146" font-weight="bold">外皮（エクソカープ）</text>
+    <text x="708" y="172" font-size="15" fill="#5D4037">熟すと赤や黄に色づく皮。精製の最初に果肉ごと外されることが多い</text>
+    <!-- 果肉 -->
+    <polyline points="462,330 580,238 668,238" fill="none" stroke="#A04000" stroke-width="2"/>
+    <circle cx="462" cy="330" r="5" fill="#A04000"/>
+    <rect x="676" y="216" width="22" height="22" fill="#E67E22" stroke="#A04000"/>
+    <text x="708" y="234" font-weight="bold">果肉（メソカープ）</text>
+    <text x="708" y="260" font-size="15" fill="#5D4037">甘みのある果肉層。ナチュラルでは付けたまま乾燥させる</text>
+    <!-- ミューシレージ -->
+    <polyline points="420,505 580,326 668,326" fill="none" stroke="#9A7B0A" stroke-width="2"/>
+    <circle cx="420" cy="505" r="5" fill="#9A7B0A"/>
+    <rect x="676" y="304" width="22" height="22" fill="#F5C542" stroke="#9A7B0A"/>
+    <text x="708" y="322" font-weight="bold">ミューシレージ（粘質層）</text>
+    <text x="708" y="348" font-size="15" fill="#5D4037">パーチメントを包むペクチン質の層。精製方式の違いが最も直接現れる層</text>
+    <!-- パーチメント -->
+    <polyline points="382,300 580,414 668,414" fill="none" stroke="#8D6E3F" stroke-width="2"/>
+    <circle cx="382" cy="300" r="5" fill="#8D6E3F"/>
+    <rect x="676" y="392" width="22" height="22" fill="#C9A86A" stroke="#8D6E3F"/>
+    <text x="708" y="410" font-weight="bold">パーチメント（内果皮）</text>
+    <text x="708" y="436" font-size="15" fill="#5D4037">種子を包む硬い殻。乾燥後の保管はこの状態が多く、輸出前に脱穀で除去</text>
+    <!-- シルバースキン -->
+    <polyline points="368,368 580,502 668,502" fill="none" stroke="#616A6B" stroke-width="2"/>
+    <circle cx="368" cy="368" r="5" fill="#616A6B"/>
+    <rect x="676" y="480" width="22" height="22" fill="#D5D8DC" stroke="#616A6B"/>
+    <text x="708" y="498" font-weight="bold">シルバースキン（種皮）</text>
+    <text x="708" y="524" font-size="15" fill="#5D4037">生豆の表面を覆う薄い銀色の皮。焙煎時にはチャフとして剥がれる</text>
+    <!-- 種子 -->
+    <polyline points="296,392 580,590 668,590" fill="none" stroke="#3E5F2A" stroke-width="2"/>
+    <circle cx="296" cy="392" r="5" fill="#3E5F2A"/>
+    <rect x="676" y="568" width="22" height="22" fill="#6B8E4E" stroke="#3E5F2A"/>
+    <text x="708" y="586" font-weight="bold">種子（胚乳）＝いわゆる生豆</text>
+    <text x="708" y="612" font-size="15" fill="#5D4037">焙煎・抽出の対象になる部分。平らな面の中央にセンターカット（溝）がある</text>
+    <!-- 胚 -->
+    <polyline points="313,452 470,678 668,678" fill="none" stroke="#2E4A1F" stroke-width="2"/>
+    <circle cx="313" cy="452" r="5" fill="#2E4A1F"/>
+    <rect x="676" y="656" width="22" height="22" fill="#2E4A1F"/>
+    <text x="708" y="674" font-weight="bold">胚</text>
+    <text x="708" y="700" font-size="15" fill="#5D4037">種子の内部にある小さな胚。発芽の起点になる部分</text>
+  </g>
+
+  <!-- ===== ピーベリー小図 ===== -->
+  <g>
+    <ellipse cx="110" cy="700" rx="52" ry="60" fill="#B03A2E" stroke="#7B241C" stroke-width="2.5"/>
+    <ellipse cx="110" cy="700" rx="38" ry="46" fill="#E67E22"/>
+    <circle cx="110" cy="700" r="24" fill="#C9A86A" stroke="#8D6E3F" stroke-width="2"/>
+    <circle cx="110" cy="700" r="16" fill="#6B8E4E"/>
+    <text x="182" y="688" font-size="16" font-weight="bold" fill="#2E1B12">ピーベリー</text>
+    <text x="182" y="714" font-size="15" fill="#5D4037">1粒だけが丸く発達したもの。選別上区別される（03-07）</text>
+  </g>
+
+  <!-- ===== 分解表示（外→内） ===== -->
+  <g>
+    <text x="40" y="800" font-size="19" font-weight="bold" fill="#2E1B12">分解表示（外側 → 中心）</text>
+    <!-- 外皮 -->
+    <ellipse cx="120" cy="852" rx="46" ry="34" fill="#B03A2E"/>
+    <text x="120" y="905" font-size="14" fill="#2E1B12" text-anchor="middle">外皮</text>
+    <text x="196" y="860" font-size="22" fill="#5D4037">→</text>
+    <!-- 果肉 -->
+    <ellipse cx="282" cy="852" rx="46" ry="34" fill="#E67E22"/>
+    <text x="282" y="905" font-size="14" fill="#2E1B12" text-anchor="middle">果肉</text>
+    <text x="358" y="860" font-size="22" fill="#5D4037">→</text>
+    <!-- ミューシレージ -->
+    <ellipse cx="444" cy="852" rx="46" ry="34" fill="#F5C542"/>
+    <text x="444" y="905" font-size="14" fill="#2E1B12" text-anchor="middle">ミューシレージ</text>
+    <text x="520" y="860" font-size="22" fill="#5D4037">→</text>
+    <!-- パーチメント -->
+    <ellipse cx="606" cy="852" rx="40" ry="34" fill="#C9A86A"/>
+    <text x="606" y="905" font-size="14" fill="#2E1B12" text-anchor="middle">パーチメント</text>
+    <text x="676" y="860" font-size="22" fill="#5D4037">→</text>
+    <!-- シルバースキン -->
+    <ellipse cx="762" cy="852" rx="36" ry="32" fill="#D5D8DC" stroke="#616A6B"/>
+    <text x="762" y="905" font-size="14" fill="#2E1B12" text-anchor="middle">シルバースキン</text>
+    <text x="828" y="860" font-size="22" fill="#5D4037">→</text>
+    <!-- 種子 -->
+    <ellipse cx="914" cy="852" rx="34" ry="32" fill="#6B8E4E"/>
+    <text x="914" y="905" font-size="14" fill="#2E1B12" text-anchor="middle">種子（胚乳）</text>
+    <text x="978" y="846" font-size="15" fill="#5D4037">精製とは、この層をどの段階まで・</text>
+    <text x="978" y="872" font-size="15" fill="#5D4037">どの順序で取り除くかという工程（03-05）</text>
+  </g>
+</svg>

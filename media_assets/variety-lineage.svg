@@ -1,0 +1,99 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 880" font-family="'Hiragino Sans','Hiragino Kaku Gothic ProN','Noto Sans JP',sans-serif">
+  <rect width="1280" height="880" fill="#FFFDF8"/>
+  <text x="40" y="50" font-size="28" font-weight="bold" fill="#2E1B12">品種系統の簡略図 ― ティピカ／ブルボンと、もう一つの伝播経路</text>
+  <text x="40" y="82" font-size="16" fill="#5D4037">線は、エントリー（01-04／02-02／02-03／02-04）で関係が確認できるものだけに引いています。対応メディア M-02-03-1 の簡略版です。</text>
+
+  <!-- ===== 左列: ティピカ／ブルボンの本流 ===== -->
+  <g>
+    <rect x="40" y="110" width="440" height="70" rx="10" fill="#2E4A1F"/>
+    <text x="260" y="140" font-size="18" font-weight="bold" fill="#FFFFFF" text-anchor="middle">エチオピア高原の野生集団・在来系統</text>
+    <text x="260" y="164" font-size="14" fill="#D5E8C8" text-anchor="middle">アラビカの起源地。在来系統（ランドレース）の多様性の源泉</text>
+  </g>
+  <line x1="260" y1="180" x2="260" y2="216" stroke="#2E4A1F" stroke-width="3"/>
+  <polygon points="252,216 268,216 260,230" fill="#2E4A1F"/>
+  <g>
+    <rect x="40" y="230" width="440" height="60" rx="10" fill="#6B8E4E"/>
+    <text x="260" y="256" font-size="18" font-weight="bold" fill="#FFFFFF" text-anchor="middle">イエメン（モカ）での栽培化</text>
+    <text x="260" y="278" font-size="14" fill="#EDF5E4" text-anchor="middle">世界へ広がる栽培集団の入口（01-03／01-04）</text>
+  </g>
+
+  <!-- 分岐 -->
+  <path d="M180 290 L180 330" stroke="#2E4A1F" stroke-width="3" fill="none"/>
+  <path d="M340 290 L340 330" stroke="#2E4A1F" stroke-width="3" fill="none"/>
+  <polygon points="172,330 188,330 180,344" fill="#2E4A1F"/>
+  <polygon points="332,330 348,330 340,344" fill="#2E4A1F"/>
+  <text x="180" y="316" font-size="14" fill="#2E4A1F" text-anchor="middle">経路A</text>
+  <text x="340" y="316" font-size="14" fill="#2E4A1F" text-anchor="middle">経路B</text>
+
+  <g>
+    <rect x="40" y="344" width="270" height="120" rx="10" fill="#FFFFFF" stroke="#1A5276" stroke-width="3"/>
+    <text x="175" y="378" font-size="19" font-weight="bold" fill="#1A5276" text-anchor="middle">ティピカ系統</text>
+    <text x="175" y="404" font-size="14" fill="#5D4037" text-anchor="middle">ジャワへの導入（1699年）が幹。</text>
+    <text x="175" y="426" font-size="14" fill="#5D4037" text-anchor="middle">オランダ領東インド経由で</text>
+    <text x="175" y="448" font-size="14" fill="#5D4037" text-anchor="middle">世界へ広がった（01-04）</text>
+  </g>
+  <g>
+    <rect x="330" y="344" width="270" height="120" rx="10" fill="#FFFFFF" stroke="#922B21" stroke-width="3"/>
+    <text x="465" y="378" font-size="19" font-weight="bold" fill="#922B21" text-anchor="middle">ブルボン系統</text>
+    <text x="465" y="404" font-size="14" fill="#5D4037" text-anchor="middle">ブルボン島（現レユニオン）へ</text>
+    <text x="465" y="426" font-size="14" fill="#5D4037" text-anchor="middle">モカから直接導入（1715〜1717年）</text>
+    <text x="465" y="448" font-size="14" fill="#5D4037" text-anchor="middle">が起源（01-04）</text>
+  </g>
+
+  <g>
+    <rect x="40" y="490" width="560" height="104" rx="10" fill="#FEF9E7" stroke="#9A7B0A" stroke-width="1.5"/>
+    <text x="60" y="520" font-size="16" font-weight="bold" fill="#7D6608">この2系統が現代の栽培品種の大半の遺伝的基盤</text>
+    <text x="60" y="546" font-size="14" fill="#5D4037">分子マーカー研究で、栽培アラビカの遺伝的基盤はティピカとブルボンの2系統に整理できると</text>
+    <text x="60" y="568" font-size="14" fill="#5D4037">示されています（01-04／02-02）。ペルーではティピカが主力（作付の7割超）と報告されます（04-02）。</text>
+  </g>
+
+  <g>
+    <rect x="40" y="620" width="560" height="120" rx="10" fill="#F2F3F4" stroke="#616A6B" stroke-width="1.5" stroke-dasharray="7 5"/>
+    <text x="60" y="650" font-size="16" font-weight="bold" fill="#424949">線を引いていない品種（親子関係が未確認のため）</text>
+    <text x="60" y="676" font-size="14" fill="#5D4037">カトゥーラ、カトゥアイ、SL28／SL34、パカマラ、カティモール等は、系統図メディア</text>
+    <text x="60" y="698" font-size="14" fill="#5D4037">M-02-03-1 の完全版で扱う対象ですが、本DBの entries では親子関係の確認が済んで</text>
+    <text x="60" y="720" font-size="14" fill="#5D4037">いないため、この簡略図では推測の線を引いていません。</text>
+  </g>
+
+  <!-- ===== 右列: エチオピアから直接の経路 ===== -->
+  <path d="M480 145 L640 145" stroke="#7D3C98" stroke-width="3" fill="none"/>
+  <polygon points="640,137 640,153 654,145" fill="#7D3C98"/>
+  <text x="560" y="128" font-size="14" fill="#7D3C98" text-anchor="middle">20世紀・研究機関経由の直接経路</text>
+
+  <g>
+    <rect x="660" y="110" width="580" height="170" rx="10" fill="#FFFFFF" stroke="#7D3C98" stroke-width="3"/>
+    <text x="680" y="144" font-size="19" font-weight="bold" fill="#7D3C98">ゲイシャ（Geisha / Gesha）</text>
+    <text x="680" y="170" font-size="14" fill="#5D4037">ティピカ／ブルボンのどちらからも派生していない、エチオピアの在来系統（02-03）</text>
+    <text x="680" y="200" font-size="15" fill="#2E1B12">1930年代 エチオピアのコーヒー林で採集</text>
+    <text x="680" y="226" font-size="15" fill="#2E1B12">→ Lyamungu 研究所（タンザニア）→ CATIE（1953年、導入番号 T2722）</text>
+    <text x="680" y="252" font-size="15" fill="#2E1B12">→ 1960年代にパナマへ配布され、2000年代半ばに高評価で注目</text>
+  </g>
+
+  <path d="M480 160 C 560 200, 580 330, 646 348" stroke="#7D3C98" stroke-width="2.5" fill="none"/>
+  <polygon points="636,340 656,344 646,358" fill="#7D3C98"/>
+  <g>
+    <rect x="660" y="310" width="580" height="86" rx="10" fill="#FFFFFF" stroke="#7D3C98" stroke-width="2.5"/>
+    <text x="680" y="342" font-size="18" font-weight="bold" fill="#7D3C98">Java</text>
+    <text x="680" y="368" font-size="14" fill="#5D4037">エチオピアの Abysinia と呼ばれる在来集団からの選抜であることが、</text>
+    <text x="680" y="388" font-size="14" fill="#5D4037">遺伝子フィンガープリントで示されている（02-04）</text>
+  </g>
+
+  <g>
+    <rect x="660" y="420" width="580" height="104" rx="10" fill="#FFFFFF" stroke="#7D3C98" stroke-width="2.5"/>
+    <text x="680" y="452" font-size="18" font-weight="bold" fill="#7D3C98">JARC 選抜系統（エチオピア国内）</text>
+    <text x="680" y="478" font-size="14" fill="#5D4037">74110: Metu-Bishari の在来集団から選抜（コーヒーベリー病に抵抗性、02-04）</text>
+    <text x="680" y="502" font-size="14" fill="#5D4037">741／754: 同病抵抗性の標準チェック品種として使われる選抜系統</text>
+  </g>
+
+  <g>
+    <rect x="660" y="548" width="580" height="104" rx="10" fill="#F2F3F4" stroke="#616A6B" stroke-width="2" stroke-dasharray="7 5"/>
+    <text x="680" y="580" font-size="18" font-weight="bold" fill="#424949">コロンビアの耐性品種群（線なし）</text>
+    <text x="680" y="606" font-size="14" fill="#5D4037">カスティージョ／バリエダ・コロンビア／タビは Cenicafé が育成したさび病</text>
+    <text x="680" y="628" font-size="14" fill="#5D4037">耐性品種として知られますが（04-02）、親系統は entries で未確認のため線を引きません</text>
+  </g>
+
+  <text x="660" y="700" font-size="15" fill="#5D4037">読み方: 実線＝来歴・系統関係が entries で確認できるもの。破線枠＝存在と育成主体は</text>
+  <text x="660" y="726" font-size="15" fill="#5D4037">確認できても、親子関係が未確認のため線を結んでいないもの。</text>
+  <text x="40" y="790" font-size="15" fill="#5D4037">注: 「ゲイシャ」を名乗るコーヒーには遺伝的に異なるものが混在します。パナマ系ゲイシャ（T2722 の子孫）は遺伝的に均一で区別可能と WCR が確認しています（02-03）。</text>
+  <text x="40" y="818" font-size="15" fill="#5D4037">品種の親子関係を構造化データ（varieties.parent_variety_id）で確定できたものから、完全版の系統図へ順次反映します。</text>
+</svg>
