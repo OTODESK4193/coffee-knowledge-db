@@ -48,7 +48,7 @@
    * 'phrase'    = 短い名詞・語句
    * 再抽選してよいのは 'phrase' のみ。文型の正解に別の文型の誤答を混ぜると
    * 「もう1つの正しい文」が紛れ込む事故が起きるため、判定は安全側に倒す。 */
-  var SENT_END = /(である|であった|だった|する|した|される|された|られる|られた|なる|なった|ている|ていた|ある|あった|ない|なかった|とされる|と呼ばれる|と呼ぶ|をいう|を指す|が高い|が大きい|が小さい|が多い|が少ない|が異なる|が続く|が中心|が主体|が一般的|が重要|に位置づけられる|に分類される|に用いられる|として知られる)$/;
+  var SENT_END = /(である|であった|だった|た|れた|する|した|される|された|られる|られた|なる|なった|ている|ていた|ある|あった|ない|なかった|とされる|と呼ばれる|と呼ぶ|をいう|を指す|として|ため|が高い|が大きい|が小さい|が多い|が少ない|が異なる|が続く|が中心|が主体|が一般的|が重要|に位置づけられる|に分類される|に用いられる|として知られる)$/;
   function classifyAnswer(text) {
     if (/[0-9０-９]/.test(text)) return 'numeric';
     if (text.indexOf('。') >= 0) return 'statement';
@@ -56,6 +56,9 @@
     if (SENT_END.test(t)) return 'statement';
     if (t.length > 15 && /こと$/.test(t)) return 'statement'; // 名詞化した節
     if (t.indexOf('、') >= 0 && t.length >= 30) return 'statement'; // 長い叙述句
+    /* 長い語句は節（文の一部）であることが多く、別話題の節同士が混ざると
+       「明らかに無関係な選択肢」になる。20字超は安全側に倒して対象外にする。 */
+    if (t.length > 20) return 'statement';
     return 'phrase';
   }
   function isRedrawable(q) { return classifyAnswer(correctText(q)) === 'phrase'; }
@@ -88,6 +91,9 @@
     questions.forEach(function (o) {
       if (o.id === q.id) return;
       if (catOf(o) !== cat) return;
+      /* 話題の近さを担保するため、プールは同一サブテーマ内に限る。
+         カテゴリ横断の抽選は「明らかに無関係な選択肢」の主因になった。 */
+      if (o.subtheme_id !== q.subtheme_id) return;
       if (o.entry_id === q.entry_id) return;
       var c = correctText(o);
       if (c === correct || seen[c]) return;
@@ -95,10 +101,11 @@
       if (/[0-9０-９]/.test(c)) return;                  // R1
       var ratio = c.length / correct.length;            // R3
       if (ratio < 0.4 || ratio > 2.5) return;
-      if (suffix && placeSuffix(c) !== suffix) return;  // R4
-      if (isCountry && !(countryNames && countryNames.has(c))) return; // R4（国名）
+      if ((suffix || null) !== (placeSuffix(c) || null)) return; // R4（双方向）
+      var cIsCountry = countryNames && countryNames.has(c);
+      if (!!isCountry !== !!cIsCountry) return;         // R4（国名の対称性）
       seen[c] = true;
-      pool.push({ text: c, sameSub: o.subtheme_id === q.subtheme_id });
+      pool.push({ text: c, sameSub: true });
     });
     return pool;
   }
@@ -110,7 +117,11 @@
     var originals = q.choices.filter(function (_, i) { return i !== q.correct_index; });
     var distractors = originals;
     var redrawn = false;
-    if (isRedrawable(q)) {
+    /* 再抽選は現在オフ。プールを厳しく絞っても、国別問題（04-02）のように
+       1つのサブテーマ内で種・精製・地域・現地名が混在し、「明らかに無関係な
+       選択肢」が残るケースを排除できなかったため。誤答は全問、監査済みの
+       作問時の選択肢を使い、シャッフルのみを行う（方式Aの安全側運用）。 */
+    if (false && isRedrawable(q)) {
       var pool = buildDistractorPool(q, questions, countryNames);
       if (pool.length >= 3) {                            // R5
         var same = shuffle(pool.filter(function (p) { return p.sameSub; }), rng);

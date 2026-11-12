@@ -56,7 +56,20 @@
   function svgDiv(file) {
     var div = document.createElement('div');
     div.className = 'svg-box';
-    loadSvg(file, function (t) { div.innerHTML = t; });
+    loadSvg(file, function (t) {
+      div.innerHTML = t;
+      var svg = div.querySelector('svg');
+      if (svg) {
+        /* CSSの版に依存せず、寸法と縦横比を要素側で確定させる（縦長化防止） */
+        var vb = (svg.getAttribute('viewBox') || '').split(/\s+/).map(Number);
+        svg.style.display = 'block';
+        svg.style.width = '100%';
+        svg.style.height = 'auto';
+        if (vb.length === 4 && vb[2] > 0 && vb[3] > 0) {
+          svg.style.aspectRatio = vb[2] + ' / ' + vb[3];
+        }
+      }
+    });
     return div;
   }
 
@@ -344,7 +357,7 @@
         if (Object.keys(pointers).length === 0) {
           var now = Date.now();
           if (now - lastTap < 300) {
-            self.scale = self.scale > 1.2 ? 1 : 2.5;
+            self.scale = self.scale > 1.2 ? 1 : 3;
             if (self.scale === 1) { self.tx = 0; self.ty = 0; }
             self.apply();
             lastTap = 0;
