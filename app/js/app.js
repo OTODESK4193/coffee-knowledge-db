@@ -510,8 +510,16 @@
       b.appendChild(tspan);
       if (state) {
         b.disabled = true;
-        if (idx === card.correctIndex) b.classList.add('choice-correct');
-        if (idx === state.picked && idx !== card.correctIndex) b.classList.add('choice-wrong');
+        if (idx === card.correctIndex) {
+          b.classList.add('choice-correct');
+          var mk = el('span', 'choice-mark mark-ok', '○');
+          b.insertBefore(mk, b.firstChild);
+        }
+        if (idx === state.picked && idx !== card.correctIndex) {
+          b.classList.add('choice-wrong');
+          var mk2 = el('span', 'choice-mark mark-ng', '✕');
+          b.insertBefore(mk2, b.firstChild);
+        }
         var note = choiceNote(card, text);
         if (note) b.appendChild(el('span', 'choice-note', note));
       } else {
@@ -575,8 +583,9 @@
 
   function renderExplanation(card, state, ctx) {
     var box = el('div', 'explain');
-    var judge = el('div', 'judge ' + (state.correct ? 'judge-ok' : 'judge-ng'),
-      state.correct ? '正解です' : '不正解です');
+    var judge = el('div', 'judge ' + (state.correct ? 'judge-ok' : 'judge-ng'));
+    judge.appendChild(el('span', 'judge-mark', state.correct ? '○' : '✕'));
+    judge.appendChild(el('span', null, state.correct ? '正解です' : '不正解です'));
     box.appendChild(judge);
     if (card.kind === 'q') {
       var q = byId[card.qid];
