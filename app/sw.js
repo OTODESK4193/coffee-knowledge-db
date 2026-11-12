@@ -1,15 +1,13 @@
 /* Service Worker — アプリ本体と同梱データをキャッシュし、オフラインでも動かす。
  * 写真（Wikimedia Commons の遠隔画像）はキャッシュせず、オンライン時のみ表示する。
  * データを更新したら CACHE_VERSION を上げること。 */
-var CACHE_VERSION = 'cka-static-v1';
+var CACHE_VERSION = 'cka-static-v2';
 var CORE = [
   './',
   './index.html',
   './style.css',
   './manifest.json',
   './icon.svg',
-  './icon-192.png',
-  './icon-512.png',
   './js/store.js',
   './js/engine.js',
   './js/terms.js',
@@ -34,7 +32,10 @@ var CORE = [
 self.addEventListener('install', function (event) {
   event.waitUntil(
     caches.open(CACHE_VERSION).then(function (cache) {
-      return cache.addAll(CORE);
+      /* 1件の失敗で全体を落とさないよう、個別に追加する */
+      return Promise.all(CORE.map(function (u) {
+        return cache.add(u).catch(function () { /* 取れないものはオンラインで補う */ });
+      }));
     }).then(function () { return self.skipWaiting(); })
   );
 });
